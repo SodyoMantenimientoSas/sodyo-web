@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sodyo Mantenimiento S.A.S. | Mantenimiento Preventivo y Correctivo</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0284C7',
+                            darkBlue: '#0F172A',
+                            navy: '#1E293B',
+                            teal: '#0D9488',
+                            lightBg: '#F8FAFC'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-lightBg text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- Header / Navbar -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="bg-brand-blue text-white p-2.5 rounded-lg font-bold text-xl flex items-center justify-center shadow-md">
+                        <i class="fa-solid fa-wrench"></i>
+                    </div>
+                    <div>
+                        <span class="text-2xl font-extrabold tracking-tight text-brand-darkBlue block leading-none">SODYO</span>
+                        <span class="text-xs font-semibold text-brand-teal tracking-widest uppercase">Mantenimiento S.A.S.</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex space-x-8 font-medium text-slate-600">
+                    <a href="#inicio" class="hover:text-brand-blue transition">Inicio</a>
+                    <a href="#nosotros" class="hover:text-brand-blue transition">Nosotros</a>
+                    <a href="#servicios" class="hover:text-brand-blue transition">Servicios</a>
+                    <a href="#contacto" class="hover:text-brand-blue transition">Contacto</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:flex items-center">
+                    <a href="#contacto" class="bg-brand-blue hover:bg-sky-700 text-white font-semibold px-5 py-2.5 rounded-lg shadow transition duration-200 flex items-center space-x-2">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Solicitar Cotización</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-slate-900 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-2">
+            <a href="#inicio" class="block px-3 py-2 rounded-md text-slate-700 hover:bg-slate-100 font-medium">Inicio</a>
+            <a href="#nosotros" class="block px-3 py-2 rounded-md text-slate-700 hover:bg-slate-100 font-medium">Nosotros</a>
+            <a href="#servicios" class="block px-3 py-2 rounded-md text-slate-700 hover:bg-slate-100 font-medium">Servicios</a>
+            <a href="#contacto" class="block px-3 py-2 rounded-md text-slate-700 hover:bg-slate-100 font-medium">Contacto</a>
+            <a href="#contacto" class="block w-full text-center bg-brand-blue text-white font-semibold px-4 py-2 rounded-lg mt-2">Solicitar Cotización</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section id="inicio" class="relative bg-gradient-to-r from-brand-darkBlue via-slate-900 to-brand-navy text-white py-20 lg:py-32 overflow-hidden">
+            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#0284C7_1px,transparent_1px)] [background-size:16px_16px]"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="inline-block bg-brand-blue/20 text-sky-400 font-semibold px-3 py-1 rounded-full text-sm mb-4 border border-sky-500/30">
+                            Soluciones Integrales de Ingeniería
+                        </span>
+                        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight mb-6">
+                            Garantizamos la Continuidad y Eficiencia de tus Equipos
+                        </h1>
+                        <p class="text-slate-300 text-lg mb-8 leading-relaxed">
+                            En <strong class="text-white">Sodyo Mantenimiento S.A.S.</strong> brindamos soluciones especializadas en mantenimiento preventivo, correctivo y optimización técnica con altos estándares de calidad e idoneidad profesional.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="#contacto" class="bg-brand-blue hover:bg-sky-600 text-white text-center font-bold px-7 py-3.5 rounded-lg shadow-lg transition duration-200">
+                                Contactar un Especialista
+                            </a>
+                            <a href="#servicios" class="border border-slate-600 hover:border-slate-400 text-slate-200 hover:text-white text-center font-semibold px-7 py-3.5 rounded-lg transition duration-200">
+                                Ver Servicios
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="bg-gradient-to-tr from-brand-blue to-brand-teal p-1 rounded-2xl shadow-2xl">
+                            <div class="bg-brand-navy p-8 rounded-2xl border border-slate-700/50 space-y-6">
+                                <div class="flex items-center space-x-4">
+                                    <div class="bg-sky-500/10 p-3 rounded-lg text-sky-400">
+                                        <i class="fa-solid fa-shield-halved text-2xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-lg">Mantenimiento Confiable</h3>
+                                        <p class="text-slate-400 text-sm">Disminución de paradas no programadas</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="bg-teal-500/10 p-3 rounded-lg text-teal-400">
+                                        <i class="fa-solid fa-user-gear text-2xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-lg">Personal Técnico Calificado</h3>
+                                        <p class="text-slate-400 text-sm">Especialistas comprometidos con la excelencia</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="bg-blue-500/10 p-3 rounded-lg text-blue-400">
+                                        <i class="fa-solid fa-clock-rotate-left text-2xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-lg">Respuesta Agil</h3>
+                                        <p class="text-slate-400 text-sm">Atención rápida y diagnósticos precisos</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nosostros Section -->
+        <section id="nosotros" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl font-extrabold text-brand-darkBlue sm:text-4xl mb-4">Sobre Sodyo Mantenimiento S.A.S.</h2>
+                    <div class="w-20 h-1 bg-brand-blue mx-auto mb-6 rounded-full"></div>
+                    <p class="text-slate-600 text-lg leading-relaxed">
+                        Somos una empresa orientada a la prestación de servicios de ingeniería, inspección y mantenimiento operativo. Nos enfocamos en proteger la inversión de nuestros clientes garantizando la máxima vida útil de sus activos.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-slate-50 p-8 rounded-xl border border-slate-100 hover:shadow-lg transition">
+                        <div class="text-brand-blue text-3xl mb-4"><i class="fa-solid fa-bullseye"></i></div>
+                        <h3 class="text-xl font-bold text-brand-darkBlue mb-3">Nuestra Misión</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed"> Proporcionar soluciones efectivas e innovadoras de mantenimiento integral, asegurando operatividad continua y cumplimiento de normativas vigentes.</p>
+                    </div>
+                    <div class="bg-slate-50 p-8 rounded-xl border border-slate-100 hover:shadow-lg transition">
+                        <div class="text-brand-blue text-3xl mb-4"><i class="fa-solid fa-eye"></i></div>
+                        <h3 class="text-xl font-bold text-brand-darkBlue mb-3">Nuestra Visión</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Ser reconocidos a nivel nacional como aliados estratégicos líderes en servicios de mantenimiento y respaldo técnico especializado.</p>
+                    </div>
+                    <div class="bg-slate-50 p-8 rounded-xl border border-slate-100 hover:shadow-lg transition">
+                        <div class="text-brand-blue text-3xl mb-4"><i class="fa-solid fa-award"></i></div>
+                        <h3 class="text-xl font-bold text-brand-darkBlue mb-3">Compromiso de Calidad</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Aplicamos rigurosos procedimientos de control para asegurar la confiabilidad, precisión y excelencia en cada intervención técnica.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Servicios Section -->
+        <section id="servicios" class="py-20 bg-brand-lightBg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl font-extrabold text-brand-darkBlue sm:text-4xl mb-4">Nuestros Servicios</h2>
+                    <div class="w-20 h-1 bg-brand-teal mx-auto mb-6 rounded-full"></div>
+                    <p class="text-slate-600 text-lg">Ofrecemos cobertura completa para sus necesidades técnicas y operativas.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 hover:border-brand-blue hover:shadow-md transition">
+                        <div class="w-12 h-12 bg-sky-100 text-brand-blue rounded-lg flex items-center justify-center text-xl font-bold mb-6">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-darkBlue mb-3">Mantenimiento Preventivo</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Programación de inspecciones regulares, lubricación, ajuste y diagnóstico preventivo para evitar fallas imprevistas.
+                        </p>
+                    </div>
+
+                    <!-- Service Card 2 -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 hover:border-brand-blue hover:shadow-md transition">
+                        <div class="w-12 h-12 bg-teal-100 text-brand-teal rounded-lg flex items-center justify-center text-xl font-bold mb-6">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-darkBlue mb-3">Mantenimiento Correctivo</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Diagnóstico de averías y reparación oportuna para restablecer las condiciones normales de funcionamiento.
+                        </p>
+                    </div>
+
+                    <!-- Service Card 3 -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 hover:border-brand-blue hover:shadow-md transition">
+                        <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center text-xl font-bold mb-6">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-darkBlue mb-3">Inspección y Diagnóstico</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Evaluación del estado operativo de equipos mediante herramientas de medición para determinar planes de optimización.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contacto" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <div>
+                        <h2 class="text-3xl font-extrabold text-brand-darkBlue mb-4">Contáctenos</h2>
+                        <p class="text-slate-600 mb-8">
+                            ¿Tiene alguna consulta o requiere una cotización para sus instalaciones? Envíenos un mensaje y nuestro equipo técnico se pondrá en contacto a la brevedad.
+                        </p>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-sky-100 text-brand-blue p-3 rounded-lg mt-1">
+                                    <i class="fa-solid fa-envelope text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-brand-darkBlue">Correo Electrónico</h4>
+                                    <p class="text-slate-600">contacto@sodyomantenimientosas.com</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-teal-100 text-brand-teal p-3 rounded-lg mt-1">
+                                    <i class="fa-solid fa-globe text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-brand-darkBlue">Sitio Web Oficial</h4>
+                                    <p class="text-slate-600">www.sodyomantenimientosas.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm">
+                        <form id="contactForm" class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-1">Nombre Completo</label>
+                                <input type="text" required class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition" placeholder="Ej. Juan Pérez">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-1">Correo Electrónico</label>
+                                <input type="email" required class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition" placeholder="nombre@empresa.com">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-1">Teléfono de contacto</label>
+                                <input type="tel" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition" placeholder="+57 300 000 0000">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-1">Mensaje / Requerimiento</label>
+                                <textarea rows="4" required class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition" placeholder="Describa el servicio o mantenimiento que requiere..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-brand-blue hover:bg-sky-700 text-white font-bold py-3 rounded-lg shadow transition duration-200">
+                                Enviar Mensaje
+                            </button>
+                            <p id="formStatus" class="hidden text-sm text-center font-medium mt-2 text-teal-600">
+                                ¡Gracias por contactarnos! Le responderemos pronto.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-darkBlue text-slate-400 py-10 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>
+                <p class="text-white font-bold text-lg">Sodyo Mantenimiento S.A.S.</p>
+                <p class="text-xs text-slate-400 mt-1">© <span id="year"></span> Todos los derechos reservados.</p>
+            </div>
+            <div class="text-xs text-slate-400">
+                Alojado gratuitamente en <a href="https://pages.github.com/" target="_blank" class="underline hover:text-white">GitHub Pages</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set dynamic current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Contact Form Simulation
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const status = document.getElementById('formStatus');
+            status.classList.remove('hidden');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
