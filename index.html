@@ -1,272 +1,304 @@
- <!-- LOGO EMPRESARIAL -->
-    <a href="#" class="flex items-center space-x-3 group">
-      <img src="logo.jpg" alt="Logo Sodyo Mantenimiento S.A.S." class="h-12 sm:h-14 w-auto object-contain rounded bg-white p-1 transition-transform group-hover:scale-105">
-    </a>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sodyo Mantenimiento S.A.S. | Tecnología Biomédica, Eléctrica y Electrónica</title>
+  <style>
+    :root {
+      --primary: #0f2c59;
+      --primary-light: #1d4ed8;
+      --accent: #0284c7;
+      --bg-dark: #0a192f;
+      --text-main: #334155;
+      --text-muted: #64748b;
+      --bg-light: #f8fafc;
+      --white: #ffffff;
+    }
 
-    <!-- NAVEGACIÓN DESKTOP -->
-    <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
-      <a href="#inicio" class="hover:text-sky-600 transition-colors">Inicio</a>
-      <a href="#nosotros" class="hover:text-sky-600 transition-colors">Nosotros</a>
-      <a href="#servicios" class="hover:text-sky-600 transition-colors">Servicios</a>
-      <a href="#contacto" class="hover:text-sky-600 transition-colors">Contacto</a>
-    </nav>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
 
-    <!-- BOTÓN DE ACCIÓN (CTA) -->
-    <div class="hidden sm:flex items-center">
-      <a href="#contacto" class="inline-flex items-center justify-center px-5 py-2.5 border border-transparent text-sm font-semibold rounded-lg text-white bg-sky-600 hover:bg-sky-700 shadow-sm transition-all hover:shadow">
-        Solicitar Cotización
+    body {
+      background-color: var(--bg-light);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    /* Header & Navigation */
+    header {
+      background-color: var(--white);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.8rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-container img {
+      max-height: 55px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .btn-quote {
+      background-color: var(--primary-light);
+      color: var(--white) !important;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .btn-quote:hover {
+      background-color: var(--primary);
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, var(--bg-dark) 0%, var(--primary) 100%);
+      color: var(--white);
+      padding: 4rem 1.5rem;
+    }
+
+    .hero-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero-text h1 {
+      font-size: 2.4rem;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      color: #cbd5e1;
+      margin-bottom: 2rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.1);
+      color: #38bdf8;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .btn-primary {
+      background-color: var(--accent);
+      color: var(--white);
+      padding: 0.8rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,0.3);
+      color: var(--white);
+      padding: 0.8rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 2rem;
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .feature-icon {
+      background: rgba(56, 189, 248, 0.2);
+      color: #38bdf8;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    /* About Section */
+    .about {
+      padding: 4rem 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .about p {
+      max-width: 800px;
+      margin: 0 auto 3rem auto;
+      color: var(--text-muted);
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .value-card {
+      background: var(--white);
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+      text-align: left;
+      border-top: 4px solid var(--accent);
+    }
+
+    .value-card h3 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-container {
+        grid-template-columns: 1fr;
+      }
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <a href="#" class="logo-container">
+        <img src="logo.jpg" alt="Sodyo Mantenimiento S.A.S.">
       </a>
-    </div>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#contacto" class="btn-quote">Solicitar Cotización</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  </div>
-</div>
-
-
-<!-- SECCIÓN HERO -->
-<section id="inicio" class="hero-gradient text-white py-20 lg:py-28 relative overflow-hidden">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-      
-      <div class="lg:col-span-7 space-y-6">
-        <span class="inline-block px-3.5 py-1.5 bg-sky-500/20 text-sky-300 border border-sky-400/30 text-xs font-semibold rounded-full uppercase tracking-wider">
-          Soluciones Integrales de Ingeniería
-        </span>
-        <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight text-white">
-          Garantizamos la Continuidad y Eficiencia de tus Equipos
-        </h1>
-        <p class="text-slate-300 text-base sm:text-lg max-w-2xl font-normal leading-relaxed">
-          En <strong class="text-white">Sodyo Mantenimiento S.A.S.</strong> brindamos soluciones especializadas en mantenimiento preventivo, correctivo y optimización técnica para tecnología <strong class="text-sky-300">Biomédica, Eléctrica y Electrónica</strong> con altos estándares de calidad.
-        </p>
-        <div class="pt-4 flex flex-col sm:flex-row gap-4">
-          <a href="#contacto" class="inline-flex justify-center items-center px-6 py-3.5 text-base font-semibold rounded-lg text-white bg-sky-600 hover:bg-sky-500 transition-all shadow-lg hover:shadow-sky-500/25">
-            Contactar un Especialista
-          </a>
-          <a href="#servicios" class="inline-flex justify-center items-center px-6 py-3.5 text-base font-semibold rounded-lg text-slate-200 border border-slate-700 hover:bg-slate-800/60 transition-all">
-            Ver Servicios
-          </a>
+  <section class="hero" id="inicio">
+    <div class="hero-container">
+      <div class="hero-text">
+        <span class="badge">Soluciones Integrales de Ingeniería</span>
+        <h1>Garantizamos la Continuidad y Eficiencia de tus Equipos</h1>
+        <p>En <strong>Sodyo Mantenimiento S.A.S.</strong> brindamos soluciones especializadas en mantenimiento preventivo, correctivo y optimización técnica para tecnología <strong>Biomédica, Eléctrica y Electrónica</strong> con altos estándares de calidad e idoneidad profesional.</p>
+        <div class="hero-buttons">
+          <a href="#contacto" class="btn-primary">Contactar un Especialista</a>
+          <a href="#servicios" class="btn-secondary">Ver Servicios</a>
         </div>
       </div>
-
-      <!-- TARJETAS DE VALOR DESTACADAS -->
-      <div class="lg:col-span-5 space-y-4">
-        <div class="p-5 rounded-xl bg-slate-800/50 border border-slate-700/60 backdrop-blur-sm flex items-start space-x-4">
-          <div class="p-3 bg-sky-500/10 text-sky-400 rounded-lg shrink-0">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-          </div>
+      <div class="hero-card">
+        <div class="feature-item">
+          <div class="feature-icon">✓</div>
           <div>
-            <h3 class="font-semibold text-white">Mantenimiento Confiable</h3>
-            <p class="text-sm text-slate-400">Disminución de paradas no programadas y mayor vida útil de activos.</p>
+            <h4>Mantenimiento Confiable</h4>
+            <p style="font-size: 0.9rem; color: #94a3b8;">Disminución de paradas no programadas.</p>
           </div>
         </div>
-
-        <div class="p-5 rounded-xl bg-slate-800/50 border border-slate-700/60 backdrop-blur-sm flex items-start space-x-4">
-          <div class="p-3 bg-sky-500/10 text-sky-400 rounded-lg shrink-0">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2"></path></svg>
-          </div>
+        <div class="feature-item">
+          <div class="feature-icon">✓</div>
           <div>
-            <h3 class="font-semibold text-white">Personal Técnico Calificado</h3>
-            <p class="text-sm text-slate-400">Especialistas en ingeniería comprometidos con la excelencia y cumplimiento normativo.</p>
+            <h4>Personal Técnico Calificado</h4>
+            <p style="font-size: 0.9rem; color: #94a3b8;">Especialistas comprometidos con la excelencia.</p>
           </div>
         </div>
-
-        <div class="p-5 rounded-xl bg-slate-800/50 border border-slate-700/60 backdrop-blur-sm flex items-start space-x-4">
-          <div class="p-3 bg-sky-500/10 text-sky-400 rounded-lg shrink-0">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-          </div>
+        <div class="feature-item">
+          <div class="feature-icon">✓</div>
           <div>
-            <h3 class="font-semibold text-white">Respuesta Ágil</h3>
-            <p class="text-sm text-slate-400">Atención técnica oportuna y diagnósticos certeros para tu tranquilidad.</p>
+            <h4>Respuesta Ágil</h4>
+            <p style="font-size: 0.9rem; color: #94a3b8;">Atención rápida y diagnóstico preciso.</p>
           </div>
         </div>
       </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- SECCIÓN NOSOTROS -->
-<section id="nosotros" class="py-20 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section class="about" id="nosotros">
+    <h2>Sobre Sodyo Mantenimiento S.A.S.</h2>
+    <p>Somos una empresa orientada a la prestación de servicios de ingeniería, inspección y mantenimiento operativo. Nos enfocamos en proteger la inversión de nuestros clientes garantizando la máxima vida útil de sus activos.</p>
     
-    <div class="text-center max-w-3xl mx-auto mb-16">
-      <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Sobre Sodyo Mantenimiento S.A.S.</h2>
-      <p class="mt-4 text-slate-600 leading-relaxed text-base">
-        Somos una empresa orientada a la prestación de servicios de ingeniería, inspección y mantenimiento operativo. Nos enfocamos en proteger la inversión de nuestros clientes garantizando la máxima vida útil de sus activos.
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      
-      <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 card-hover">
-        <div class="w-12 h-12 rounded-xl bg-sky-600 text-white flex items-center justify-center mb-6 shadow-md">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-        </div>
-        <h3 class="text-xl font-bold text-slate-900 mb-3">Nuestra Misión</h3>
-        <p class="text-slate-600 text-sm leading-relaxed">
-          Proporcionar soluciones efectivas e innovadoras de mantenimiento integral, asegurando operatividad continua y cumplimiento de normativas vigentes.
-        </p>
+    <div class="values-grid">
+      <div class="value-card">
+        <h3>Nuestra Misión</h3>
+        <p>Proporcionar soluciones efectivas e innovadoras de mantenimiento integral, asegurando operatividad continua y cumplimiento de normativas vigentes.</p>
       </div>
-
-      <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 card-hover">
-        <div class="w-12 h-12 rounded-xl bg-sky-600 text-white flex items-center justify-center mb-6 shadow-md">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-        </div>
-        <h3 class="text-xl font-bold text-slate-900 mb-3">Nuestra Visión</h3>
-        <p class="text-slate-600 text-sm leading-relaxed">
-          Ser reconocidos a nivel nacional como aliados estratégicos líderes en servicios de mantenimiento y respaldo técnico especializado.
-        </p>
+      <div class="value-card">
+        <h3>Nuestra Visión</h3>
+        <p>Ser reconocidos a nivel nacional como aliados estratégicos líderes en servicios de mantenimiento y respaldo técnico especializado.</p>
       </div>
-
-      <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 card-hover">
-        <div class="w-12 h-12 rounded-xl bg-sky-600 text-white flex items-center justify-center mb-6 shadow-md">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-        </div>
-        <h3 class="text-xl font-bold text-slate-900 mb-3">Compromiso de Calidad</h3>
-        <p class="text-slate-600 text-sm leading-relaxed">
-          Aplicamos rigurosos procedimientos de control para asegurar la confiabilidad, precisión y excelencia en cada intervención técnica.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- SECCIÓN SERVICIOS -->
-<section id="servicios" class="py-20 bg-slate-100/70 border-t border-slate-200/60">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    
-    <div class="text-center max-w-2xl mx-auto mb-16">
-      <span class="text-xs font-bold text-sky-600 uppercase tracking-widest">Especialidades</span>
-      <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight mt-1">Nuestros Servicios Principales</h2>
-      <p class="mt-3 text-slate-600 text-base">Atendemos requerimientos técnicos de diversa complejidad con personal idóneo y capacitado.</p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      
-      <!-- BIOMÉDICA -->
-      <div class="bg-white rounded-2xl p-8 border border-slate-200/80 shadow-sm card-hover flex flex-col justify-between">
-        <div>
-          <div class="w-12 h-12 rounded-lg bg-sky-50 text-sky-600 flex items-center justify-center mb-6">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-          </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-3">Tecnología Biomédica</h3>
-          <p class="text-slate-600 text-sm leading-relaxed mb-6">
-            Mantenimiento preventivo y correctivo de equipos médicos, calibración de parámetros operativos y cumplimiento de estándares de habilitación e inspección.
-          </p>
-        </div>
-        <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-100 pt-4">
-          <li class="flex items-center"><span class="w-1.5 h-1.5 bg-sky-500 rounded-full mr-2"></span>Equipos de Diagnóstico y Monitoreo</li>
-          <li class="flex items-center"><span class="w-1.5 h-1.5 bg-sky-500 rounded-full mr-2"></span>Mantenimiento Preventivo Periódico</li>
-        </ul>
-      </div>
-
-      <!-- ELÉCTRICA -->
-      <div class="bg-white rounded-2xl p-8 border border-slate-200/80 shadow-sm card-hover flex flex-col justify-between">
-        <div>
-          <div class="w-12 h-12 rounded-lg bg-sky-50 text-sky-600 flex items-center justify-center mb-6">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-          </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-3">Sistemas Eléctricos</h3>
-          <p class="text-slate-600 text-sm leading-relaxed mb-6">
-            Revisión, adecuación e inspección de instalaciones eléctricas, tableros de distribución, protección contra sobrecargas y respaldo de energía.
-          </p>
-        </div>
-        <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-100 pt-4">
-          <li class="flex items-center"><span class="w-1.5 h-1.5 bg-sky-500 rounded-full mr-2"></span>Redes e Instalaciones Eléctricas</li>
-          <li class="flex items-center"><span class="w-1.5 h-1.5 bg-sky-500 rounded-full mr-2"></span>Diagnóstico y Control de Fallas</li>
-        </ul>
-      </div>
-
-      <!-- ELECTRÓNICA -->
-      <div class="bg-white rounded-2xl p-8 border border-slate-200/80 shadow-sm card-hover flex flex-col justify-between">
-        <div>
-          <div class="w-12 h-12 rounded-lg bg-sky-50 text-sky-600 flex items-center justify-center mb-6">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
-          </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-3">Electrónica Industrial</h3>
-          <p class="text-slate-600 text-sm leading-relaxed mb-6">
-            Diagnóstico técnico a nivel de componente, reparación de tarjetas electrónicas, automatización básica y optimización de circuitos.
-          </p>
-        </div>
-        <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-100 pt-4">
-          <li class="flex items-center"><span class="w-1.5 h-1.5 bg-sky-500 rounded-full mr-2"></span>Reparación de Tarjetas y Módulos</li>
-          <li class="flex items-center"><span class="w-1.5 h-1.5 bg-sky-500 rounded-full mr-2"></span>Optimización de Tarjetas Electrónicas</li>
-        </ul>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- SECCIÓN CONTACTO -->
-<section id="contacto" class="py-20 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    
-    <div class="bg-slate-900 rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-        
-        <div class="space-y-6">
-          <h2 class="text-3xl font-extrabold tracking-tight">¿Tienes inquietudes o requieres una cotización?</h2>
-          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-            Ponte en contacto con nuestro equipo técnico para recibir asesoría directa e integral para tus instalaciones y equipos.
-          </p>
-          
-          <div class="space-y-4 pt-2">
-            <div class="flex items-center space-x-4">
-              <div class="w-10 h-10 rounded-lg bg-sky-600/30 text-sky-400 flex items-center justify-center shrink-0">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-              </div>
-              <div>
-                <p class="text-xs text-slate-400">Correo Electrónico Corporativo</p>
-                <a href="mailto:contacto@sodyomantenimientosas.com" class="text-sm font-semibold text-white hover:text-sky-300 transition-colors">
-                  contacto@sodyomantenimientosas.com
-                </a>
-              </div>
-            </div>
-
-            <div class="flex items-center space-x-4">
-              <div class="w-10 h-10 rounded-lg bg-sky-600/30 text-sky-400 flex items-center justify-center shrink-0">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
-              </div>
-              <div>
-                <p class="text-xs text-slate-400">Sitio Web Oficial</p>
-                <p class="text-sm font-semibold text-white">sodyomantenimientosas.com</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- BOTÓN DIRECTO DE CONTACTO -->
-        <div class="bg-slate-800/80 p-8 rounded-2xl border border-slate-700/60 text-center space-y-6">
-          <h3 class="text-xl font-bold text-white">Atención Inmediata</h3>
-          <p class="text-xs text-slate-300 leading-relaxed">
-            Escríbenos directamente a través de nuestro correo corporativo o solicita una visita técnica sin compromiso.
-          </p>
-          <a href="mailto:contacto@sodyomantenimientosas.com" class="inline-block w-full py-3.5 px-6 rounded-xl font-bold text-white bg-sky-600 hover:bg-sky-500 shadow-lg transition-all">
-            Enviar un Mensaje Directo
-          </a>
-        </div>
-
+      <div class="value-card">
+        <h3>Compromiso de Calidad</h3>
+        <p>Aplicamos rigurosos procedimientos de control para asegurar la confiabilidad, precisión y excelencia en cada intervención técnica.</p>
       </div>
     </div>
+  </section>
 
-  </div>
-</section>
-
-
-    <div class="flex items-center space-x-3">
-      <img src="logo.jpg" alt="Logo Sodyo Mantenimiento S.A.S." class="h-10 w-auto object-contain rounded bg-white p-1">
-      <span class="text-xs text-slate-400">© 2026 Sodyo Mantenimiento S.A.S. Todos los derechos reservados.</span>
-    </div>
-
-    <div class="flex space-x-6 text-xs text-slate-400">
-      <a href="#inicio" class="hover:text-white transition-colors">Inicio</a>
-      <a href="#nosotros" class="hover:text-white transition-colors">Nosotros</a>
-      <a href="#servicios" class="hover:text-white transition-colors">Servicios</a>
-      <a href="#contacto" class="hover:text-white transition-colors">Contacto</a>
-    </div>
-
-  </div>
-</div>
+</body>
+</html>
