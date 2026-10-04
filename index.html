@@ -287,7 +287,7 @@
     .contact-details li {
       margin-bottom: 1rem;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 0.8rem;
       font-weight: 500;
     }
@@ -299,6 +299,15 @@
 
     .contact-details a:hover {
       text-decoration: underline;
+    }
+
+    .location-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-weight: normal;
     }
 
     .form-group {
@@ -472,13 +481,22 @@
         <p>Estamos listos para orientarte sobre la mejor estrategia de mantenimiento para tus instalaciones e instrumentos.</p>
         
         <ul class="contact-details">
-          <li>📧 <strong>Correo:</strong> <a href="mailto:contacto@sodyomantenimientosas.com">contacto@sodyomantenimientosas.com</a></li>
+          <li>💬 <strong>Whatsapp:</strong> <a href="https://wa.me/573123012926" target="_blank">3123012926</a></li>
+          <li>📧 <strong>Correo:</strong> <a href="mailto:soluciones@sodyomantenimientosas.com">soluciones@sodyomantenimientosas.com</a></li>
           <li>🌐 <strong>Web:</strong> www.sodyomantenimientosas.com</li>
-          <li>📍 <strong>Ubicación:</strong> Bogotá D.C., Colombia</li>
+          <li>
+            📍 <div>
+              <strong>Ubicaciones:</strong>
+              <div class="location-list">
+                <span><strong>Ubicación 1:</strong> Carrera 9 # 61 - 60 Off 202 Chapinero Bogotá D.C. Colombia.</span>
+                <span><strong>Ubicación 2:</strong> Tv70#67Bsur-80 T3 Int 5 Apto 1427 El Eden, Madelena, Bogotá D.C. Colombia.</span>
+              </div>
+            </div>
+          </li>
         </ul>
       </div>
 
-      <form action="mailto:contacto@sodyomantenimientosas.com" method="post" enctype="text/plain">
+      <form action="mailto:soluciones@sodyomantenimientosas.com" method="post" enctype="text/plain">
         <div class="form-group">
           <label for="nombre">Nombre completo</label>
           <input type="text" id="nombre" name="Nombre" placeholder="Tu nombre" required>
