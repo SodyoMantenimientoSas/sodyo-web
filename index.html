@@ -391,10 +391,18 @@
       gap: 0.6rem;
       font-size: 0.85rem;
       color: var(--text-muted);
+      margin-bottom: 0.8rem;
     }
 
     .checkbox-group input {
       margin-top: 0.2rem;
+      cursor: pointer;
+    }
+
+    .checkbox-group label {
+      cursor: pointer;
+      font-weight: normal;
+      margin-bottom: 0;
     }
 
     .btn-submit {
@@ -407,6 +415,7 @@
       font-size: 1rem;
       font-weight: 600;
       cursor: pointer;
+      margin-top: 0.5rem;
       transition: background 0.2s;
     }
 
@@ -618,10 +627,19 @@
           <label for="mensaje">Detalles de la solicitud</label>
           <textarea id="mensaje" name="Mensaje" placeholder="Describe los equipos o el servicio que requieres..." required></textarea>
         </div>
+        
+        <!-- Casilla 1: Tratamiento de Datos Personales -->
         <div class="form-group checkbox-group">
-          <input type="checkbox" id="habeas" required>
+          <input type="checkbox" id="habeas" name="Autorizacion_Tratamiento_Datos" value="ACEPTADO" required>
           <label for="habeas">Acepto la <a href="politica-tratamiento-datos.pdf" target="_blank" style="color: var(--accent);">política de tratamiento de datos personales</a>.</label>
         </div>
+
+        <!-- Casilla 2: Gestión de Mantenimiento -->
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="mantenimiento" name="Aceptacion_Politica_Mantenimiento" value="ACEPTADO" required>
+          <label for="mantenimiento">Acepto los términos de la <a href="politica-gestion-mantenimiento.pdf" target="_blank" style="color: var(--accent);">política de gestión de mantenimiento</a>.</label>
+        </div>
+
         <button type="submit" class="btn-submit">Enviar Solicitud</button>
       </form>
     </div>
