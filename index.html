@@ -257,6 +257,55 @@
       margin-bottom: 0.8rem;
     }
 
+    /* Policies Section */
+    .policies-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .policy-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .policy-card h3 {
+      color: var(--primary);
+      margin-bottom: 0.8rem;
+    }
+
+    .policy-card p {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .btn-download {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background-color: var(--bg-light);
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .btn-download:hover {
+      background-color: var(--accent);
+      color: var(--white);
+    }
+
     /* Contact Section */
     .contact-container {
       display: grid;
@@ -321,7 +370,8 @@
       font-size: 0.9rem;
     }
 
-    .form-group input,
+    .form-group input[type="text"],
+    .form-group input[type="email"],
     .form-group textarea {
       width: 100%;
       padding: 0.75rem;
@@ -333,6 +383,18 @@
     .form-group textarea {
       resize: vertical;
       height: 100px;
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .checkbox-group input {
+      margin-top: 0.2rem;
     }
 
     .btn-submit {
@@ -357,8 +419,26 @@
       background-color: var(--primary-dark);
       color: var(--white);
       text-align: center;
-      padding: 2rem 1.5rem;
+      padding: 2.5rem 1.5rem;
       margin-top: 3rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      list-style: none;
+      margin-bottom: 1rem;
+    }
+
+    .footer-links a {
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--white);
     }
 
     @media (max-width: 768px) {
@@ -385,6 +465,7 @@
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#nosotros">Nosotros</a></li>
         <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#politicas">Políticas</a></li>
         <li><a href="#contacto">Contacto</a></li>
         <li><a href="#contacto" class="btn-quote">Solicitar Cotización</a></li>
       </ul>
@@ -470,6 +551,34 @@
     </div>
   </section>
 
+  <!-- Policies Section -->
+  <section class="section" id="politicas">
+    <h2 class="section-title">Políticas Corporativas</h2>
+    <p class="section-subtitle">En cumplimiento de la legislación colombiana y de nuestros estándares internos de calidad, ponemos a disposición de nuestros clientes y aliados nuestros documentos normativos.</p>
+
+    <div class="policies-grid">
+      <div class="policy-card">
+        <div>
+          <h3>Política de Gestión de Mantenimiento</h3>
+          <p>Establece los criterios de calidad, protocolos de ejecución técnica y normas de seguridad en los procedimientos de mantenimiento biomédico, eléctrico y electrónico.</p>
+        </div>
+        <a href="politica-gestion-mantenimiento.pdf" target="_blank" class="btn-download">
+          📄 Descargar / Ver Documento
+        </a>
+      </div>
+
+      <div class="policy-card">
+        <div>
+          <h3>Política de Tratamiento de Datos Personales</h3>
+          <p>Define los lineamientos de recolección, almacenamiento y protección de la información registrada en cumplimiento de la Ley Estatutaria 1581 de 2012 de Habeas Data.</p>
+        </div>
+        <a href="politica-tratamiento-datos.pdf" target="_blank" class="btn-download">
+          📄 Descargar / Ver Documento
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact Section -->
   <section class="section" id="contacto">
     <h2 class="section-title">Contacto y Cotizaciones</h2>
@@ -509,6 +618,10 @@
           <label for="mensaje">Detalles de la solicitud</label>
           <textarea id="mensaje" name="Mensaje" placeholder="Describe los equipos o el servicio que requieres..." required></textarea>
         </div>
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="habeas" required>
+          <label for="habeas">Acepto la <a href="politica-tratamiento-datos.pdf" target="_blank" style="color: var(--accent);">política de tratamiento de datos personales</a>.</label>
+        </div>
         <button type="submit" class="btn-submit">Enviar Solicitud</button>
       </form>
     </div>
@@ -516,6 +629,11 @@
 
   <!-- Footer -->
   <footer>
+    <ul class="footer-links">
+      <li><a href="politica-tratamiento-datos.pdf" target="_blank">Tratamiento de Datos Personales</a></li>
+      <li>•</li>
+      <li><a href="politica-gestion-mantenimiento.pdf" target="_blank">Gestión de Mantenimiento</a></li>
+    </ul>
     <p>&copy; 2026 Sodyo Mantenimiento S.A.S. — Todos los derechos reservados.</p>
   </footer>
 
