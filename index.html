@@ -372,6 +372,7 @@
 
     .form-group input[type="text"],
     .form-group input[type="email"],
+    .form-group input[type="tel"],
     .form-group textarea {
       width: 100%;
       padding: 0.75rem;
@@ -619,10 +620,17 @@
           <label for="nombre">Nombre completo</label>
           <input type="text" id="nombre" name="Nombre" placeholder="Tu nombre" required>
         </div>
+        
         <div class="form-group">
           <label for="correo">Correo electrónico</label>
           <input type="email" id="correo" name="Correo" placeholder="tu@empresa.com" required>
         </div>
+
+        <div class="form-group">
+          <label for="whatsapp">Número de WhatsApp / Teléfono</label>
+          <input type="tel" id="whatsapp" name="Whatsapp" placeholder="Ej: 3001234567" required>
+        </div>
+
         <div class="form-group">
           <label for="mensaje">Detalles de la solicitud</label>
           <textarea id="mensaje" name="Mensaje" placeholder="Describe los equipos o el servicio que requieres..." required></textarea>
