@@ -313,7 +313,7 @@
     /* Policies Section */
     .policies-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
     }
 
@@ -481,27 +481,55 @@
     footer {
       background-color: var(--primary-dark);
       color: var(--white);
-      text-align: center;
-      padding: 2.5rem 1.5rem;
+      padding: 3rem 1.5rem;
       margin-top: 3rem;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.2rem;
+      text-align: center;
     }
 
     .footer-links {
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
+      flex-wrap: wrap;
+      gap: 1.2rem;
       list-style: none;
-      margin-bottom: 1rem;
     }
 
     .footer-links a {
       color: #94a3b8;
       text-decoration: none;
       font-size: 0.9rem;
+      transition: color 0.2s;
     }
 
     .footer-links a:hover {
       color: var(--white);
+    }
+
+    .footer-legal {
+      font-size: 0.85rem;
+      color: #94a3b8;
+      line-height: 1.5;
+    }
+
+    .footer-legal strong {
+      color: var(--white);
+    }
+
+    .footer-copy {
+      font-size: 0.85rem;
+      color: #64748b;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      width: 100%;
+      padding-top: 1rem;
     }
 
     @media (max-width: 768px) {
@@ -540,8 +568,8 @@
     <div class="hero-container">
       <div class="hero-text">
         <span class="badge">Soluciones Integrales de Ingeniería</span>
-        <h1>Garantizamos la Continuidad y Eficiencia de tus Equipos</h1>
-        <p>En <strong>Sodyo Mantenimiento S.A.S.</strong> brindamos soluciones especializadas en mantenimiento preventivo, correctivo y optimización técnica para tecnología <strong>Biomédica, Eléctrica y Electrónica</strong> con altos estándares de calidad e idoneidad profesional.</p>
+        <h1>Optimizamos la Continuidad y Eficiencia de tus Equipos</h1>
+        <p>En <strong>Sodyo Mantenimiento S.A.S.</strong> brindamos soluciones especializadas en mantenimiento preventivo, correctivo y optimización técnica para tecnología <strong>Biomédica, Eléctrica y Electrónica</strong> bajo rigurosos estándares de calidad e idoneidad profesional.</p>
         <div class="hero-buttons">
           <a href="#contacto" class="btn-primary">Contactar un Especialista</a>
           <a href="#servicios" class="btn-secondary">Ver Servicios</a>
@@ -568,7 +596,7 @@
           Contamos con la experiencia necesaria para el diagnóstico, calibración y mantenimiento de equipos biomédicos y de laboratorio de alta tecnología.
         </p>
         <p style="color: var(--text-muted);">
-          Garantizamos que cada equipo intervenido opere bajo los parámetros óptimos de precisión, cumpliendo de forma estricta con las exigencias normativas del sector salud.
+          Trabajamos bajo estrictos protocolos para que cada equipo intervenido alcance sus parámetros óptimos de precisión, cumpliendo con las exigencias del sector salud.
         </p>
       </div>
     </div>
@@ -639,6 +667,16 @@
           📄 Descargar / Ver Documento
         </a>
       </div>
+
+      <div class="policy-card">
+        <div>
+          <h3>Términos y Condiciones de Uso</h3>
+          <p>Regula las condiciones generales de uso del sitio web, propiedad intelectual, alcance de servicios y canal formal de PQR bajo la normatividad colombiana.</p>
+        </div>
+        <a href="Terminos-y-Condiciones-de-Uso.pdf" target="_blank" class="btn-download">
+          📄 Descargar / Ver Documento
+        </a>
+      </div>
     </div>
   </section>
 
@@ -661,7 +699,7 @@
               <strong>Ubicaciones:</strong>
               <div class="location-list">
                 <span><strong>Ubicación 1:</strong> Carrera 9 # 61 - 60 Off 202 Chapinero Bogotá D.C. Colombia.</span>
-                <span><strong>Ubicación 2:</strong> Tv70#67Bsur-80 T3 Int 5 Apto 1427 El Eden, Madelena, Bogotá D.C. Colombia.</span>
+                <span><strong>Ubicación 2:</strong> Tv 70 # 67B sur - 80 T3 Int 5 Apto 1427 El Eden, Bogotá D.C. Colombia.</span>
               </div>
             </div>
           </li>
@@ -689,16 +727,16 @@
           <textarea id="mensaje" name="Mensaje" placeholder="Describe los equipos o el servicio que requieres..." required></textarea>
         </div>
         
-        <!-- Casilla 1: Tratamiento de Datos Personales -->
+        <!-- Casilla 1: Tratamiento de Datos Personales con finalidad expresa -->
         <div class="form-group checkbox-group">
           <input type="checkbox" id="habeas" name="Autorizacion_Tratamiento_Datos" value="ACEPTADO" required>
-          <label for="habeas">Acepto la <a href="politica-tratamiento-datos.pdf" target="_blank" style="color: var(--accent);">política de tratamiento de datos personales</a>.</label>
+          <label for="habeas">Autorizo el tratamiento de mis datos personales para gestionar esta solicitud, responder cotizaciones y prestar el soporte requerido, conforme a la <a href="politica-tratamiento-datos.pdf" target="_blank" style="color: var(--accent);">política de tratamiento de datos personales</a>.</label>
         </div>
 
-        <!-- Casilla 2: Gestión de Mantenimiento -->
+        <!-- Casilla 2: Términos y Condiciones y Gestión de Mantenimiento -->
         <div class="form-group checkbox-group">
           <input type="checkbox" id="mantenimiento" name="Aceptacion_Politica_Mantenimiento" value="ACEPTADO" required>
-          <label for="mantenimiento">Acepto los términos de la <a href="politica-gestion-mantenimiento.pdf" target="_blank" style="color: var(--accent);">política de gestión de mantenimiento</a>.</label>
+          <label for="mantenimiento">Acepto los <a href="Terminos-y-Condiciones-de-Uso.pdf" target="_blank" style="color: var(--accent);">términos y condiciones</a> y la <a href="politica-gestion-mantenimiento.pdf" target="_blank" style="color: var(--accent);">política de gestión de mantenimiento</a>.</label>
         </div>
 
         <button type="submit" class="btn-submit">Enviar Solicitud</button>
@@ -708,12 +746,26 @@
 
   <!-- Footer -->
   <footer>
-    <ul class="footer-links">
-      <li><a href="politica-tratamiento-datos.pdf" target="_blank">Tratamiento de Datos Personales</a></li>
-      <li>•</li>
-      <li><a href="politica-gestion-mantenimiento.pdf" target="_blank">Gestión de Mantenimiento</a></li>
-    </ul>
-    <p>&copy; 2026 Sodyo Mantenimiento S.A.S. — Todos los derechos reservados.</p>
+    <div class="footer-content">
+      <ul class="footer-links">
+        <li><a href="politica-tratamiento-datos.pdf" target="_blank">Tratamiento de Datos Personales</a></li>
+        <li>•</li>
+        <li><a href="politica-gestion-mantenimiento.pdf" target="_blank">Gestión de Mantenimiento</a></li>
+        <li>•</li>
+        <li><a href="Terminos-y-Condiciones-de-Uso.pdf" target="_blank">Términos y Condiciones</a></li>
+        <li>•</li>
+        <li><a href="https://www.sic.gov.co" target="_blank" rel="noopener noreferrer">Superintendencia de Industria y Comercio (SIC)</a></li>
+      </ul>
+
+      <div class="footer-legal">
+        <p><strong>SOLUCIONES, DISEÑO Y OPTIMIZACIÓN MANTENIMIENTO S.A.S. (Sodyo Mantenimiento S.A.S.)</strong> | NIT: 901.072.920-8</p>
+        <p>Dirección de Notificación Judicial: TV 70 No. 67 B Sur 80 T 3 AP 1427, Bogotá D.C., Colombia | Correo PQR: soluciones@sodyomantenimientosas.com</p>
+      </div>
+
+      <div class="footer-copy">
+        <p>&copy; 2026 Sodyo Mantenimiento S.A.S. — Todos los derechos reservados.</p>
+      </div>
+    </div>
   </footer>
 
 </body>
